@@ -7,8 +7,11 @@
 <ul>
   <% @restaurant.reviews.each do |review| %>
     <li><%= review.content %></li>
+    <li><%= review.rating %></li>
   <% end %>
 </ul>
 
+<strong>Write a review:</strong>
+<%= render "reviews/form" %>
+
 <%= link_to "Back", restaurants_path %>
-<%= link_to "Review #{@restaurant.name}", new_restaurant_review_path(@restaurant) %>
