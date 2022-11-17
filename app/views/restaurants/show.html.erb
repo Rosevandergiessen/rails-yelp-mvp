@@ -7,7 +7,7 @@
 <ul>
   <% @restaurant.reviews.each do |review| %>
     <li><%= review.content %></li>
-    <li><%= review.rating %></li>
+    <li>rating: <%= review.rating%></li>
   <% end %>
 </ul>
 
